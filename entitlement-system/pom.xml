@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.aduer.platform</groupId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>entitlement-web</module>
+        <module>entitlement-data</module>
+        <module>entitlement-api</module>
+    </modules>
+    <artifactId>entitlement-system</artifactId>
+
+    <properties>
+        <entitlement.data.version>1.0-SNAPSHOT</entitlement.data.version>
+        <entitlement.api.version>1.0-SNAPSHOT</entitlement.api.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.aduer.platform</groupId>
+                <artifactId>entitlement-data</artifactId>
+                <version>${entitlement.data.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aduer.platform</groupId>
+                <artifactId>entitlement-api</artifactId>
+                <version>${entitlement.api.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>member-system</artifactId>
+    <packaging>pom</packaging>
+    <groupId>com.aduer.platform</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <name>member-system</name>
+
+    <modules>
+        <module>member-data</module>
+        <module>member-service</module>
+        <module>member-api</module>
+        <module>member-web</module>
+    </modules>
+
+    <properties>
+        <member.data.version>1.0-SNAPSHOT</member.data.version>
+        <member.api.version>1.0-SNAPSHOT</member.api.version>
+        <member.service.version>1.0-SNAPSHOT</member.service.version>
+        <entitlementn.api.version>1.0-SNAPSHOT</entitlementn.api.version>
+    </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+            <dependency>
+                <groupId>com.aduer.platform</groupId>
+                <artifactId>member-data</artifactId>
+                <version>${member.data.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aduer.platform</groupId>
+                <artifactId>member-api</artifactId>
+                <version>${member.service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aduer.platform</groupId>
+                <artifactId>member-service</artifactId>
+                <version>${member.service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aduer.platform</groupId>
+                <artifactId>entitlement-api</artifactId>
+                <version>${entitlementn.api.version}</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+
+</project>

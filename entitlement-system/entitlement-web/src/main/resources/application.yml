@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: entitlement-service
+  profiles:
+    active: dev
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        health-check-path: ${server.servlet.context-path}/actuator/health
+
+server:
+  port: 8003
+  servlet:
+    context-path: /api/v1/entitlement
